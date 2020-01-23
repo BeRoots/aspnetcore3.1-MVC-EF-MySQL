@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29519.161
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "weblab2", "weblab2\weblab2.csproj", "{53CFCA84-A9B7-4798-A246-C3C632998CA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestWeblab2", "XUnitTestWeblab2\XUnitTestWeblab2.csproj", "{05889316-B7AD-4C38-AD9B-E116FE4F05D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitIntegrationTestWeblab2", "XUnitIntegrationTestWeblab2\XUnitIntegrationTestWeblab2.csproj", "{5D6858CA-49AB-4769-B2B4-182EECF97A11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{53CFCA84-A9B7-4798-A246-C3C632998CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53CFCA84-A9B7-4798-A246-C3C632998CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53CFCA84-A9B7-4798-A246-C3C632998CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05889316-B7AD-4C38-AD9B-E116FE4F05D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05889316-B7AD-4C38-AD9B-E116FE4F05D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05889316-B7AD-4C38-AD9B-E116FE4F05D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05889316-B7AD-4C38-AD9B-E116FE4F05D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D6858CA-49AB-4769-B2B4-182EECF97A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6858CA-49AB-4769-B2B4-182EECF97A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6858CA-49AB-4769-B2B4-182EECF97A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6858CA-49AB-4769-B2B4-182EECF97A11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
