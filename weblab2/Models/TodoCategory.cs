@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace weblab2.Models
 {
-    public class TodoCategory
+    public enum TodoCategory
     {
+        WORK, PERSONAL, SPECIAL
     }
 }

@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace weblab2.Models
 {
-    public class TodoPriority
+    public enum TodoPriority
     {
+        LOW, HIGH
     }
 }

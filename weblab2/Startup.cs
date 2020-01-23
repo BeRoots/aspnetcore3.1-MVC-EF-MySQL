@@ -5,9 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using Pomelo.EntityFrameworkCore.MySql.Storage;
+using weblab2.Data;
 
 namespace weblab2
 {
@@ -23,6 +27,25 @@ namespace weblab2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseMySql(
+                    Configuration.GetConnectionString("DefaultConnection"),
+                    mysqlOptions =>
+                    {
+                        mysqlOptions.ServerVersion(new ServerVersion(new Version(5, 7, 23), ServerType.MySql))
+                            .CharSetBehavior(CharSetBehavior.AppendToAllAnsiColumns)
+                            .CharSet(CharSet.Latin1)
+                            .CharSetBehavior(CharSetBehavior.AppendToAllColumns)
+                            .CharSet(CharSet.Utf8Mb4)
+                            .MigrationsAssembly("weblab2")
+                            .MigrationsHistoryTable("EF_Migrations");
+                    }
+                )
+            );
+
+            services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0)
+                .AddMvcOptions(options => { options.EnableEndpointRouting = false; });
+
             services.AddControllersWithViews();
         }
 
@@ -44,6 +67,7 @@ namespace weblab2
 
             app.UseRouting();
 
+            /* REMOVED FROM DEFAULT MVC PROJECT
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -51,6 +75,12 @@ namespace weblab2
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+            });*/
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
