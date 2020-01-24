@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -43,10 +46,15 @@ namespace weblab2
                 )
             );
 
+            services.AddLocalization(options => { options.ResourcesPath = "Resources"; });
+
             services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0)
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization()
                 .AddMvcOptions(options => { options.EnableEndpointRouting = false; });
 
             services.AddControllersWithViews();
+            //services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +74,34 @@ namespace weblab2
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            var supportedCultures = new List<CultureInfo>
+                    {
+                        //new CultureInfo("en"),
+                        new CultureInfo("en-GB"),
+                        new CultureInfo("en-US"),
+                        //new CultureInfo("fr"),
+                        new CultureInfo("fr-FR"),
+                        new CultureInfo("fr-CH")
+                    };
+
+            /*            string ccTLD = "fr";
+                        /*string gTLD = "com|fr|pizza";
+                        string grTLD = "|biz|name|pro";
+                        string rTLD = "localhost";
+                        string ggrrTLD = "";* /
+                        RequestCulture ccTLDRequestCulture = ccTLD.Equals(null) ? new RequestCulture("en") : new RequestCulture(ccTLD);*/
+
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                // RequestCulture global for request network origin
+                //                DefaultRequestCulture = ccTLDRequestCulture,
+                DefaultRequestCulture = new RequestCulture("en-GB"),
+                // Formatting numbers, dates, etc.
+                SupportedCultures = supportedCultures,
+                // UI strings that we have localized.
+                SupportedUICultures = supportedCultures
+            });
 
             /* REMOVED FROM DEFAULT MVC PROJECT
             app.UseAuthorization();
