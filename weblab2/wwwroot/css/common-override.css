@@ -1,0 +1,28 @@
+@media (max-width: 479px) {
+	#navbarlogo {
+		width: 44px;
+		height: 44px;
+		margin-right: 10px;
+		margin-top: 3px;
+	}
+	#navbar-title {
+		font-size: 1em;
+	}
+	.panel-title {
+		font-size: 1em;		
+	}
+	.panel {
+		margin-left: 3px;		
+		margin-right: 3px;		
+	}
+}
+@media (max-width: 340px) {
+	#containerXsOverride {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		border-left: 0 !important;
+		border-right: 0 !important;
+	}
+}

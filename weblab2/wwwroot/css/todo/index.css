@@ -1,0 +1,128 @@
+.todo-in-futur {
+	background-color: #d0ffd0 !important;
+}
+.btn-unsuccess {
+	background-color: green;
+	color: white;
+}
+.btn-unsuccess:hover {
+	background-color: darkgreen;
+	color: white;
+}
+.btn-pencil {
+	background: url('../../images/todo/todo-pencil.png') top left / 100% 100% no-repeat !important;
+	display: inline-block;
+	position: relative;
+	width: 60%;
+	height: 54px;
+	text-align: center;
+	margin: 15% 20%;
+	border: 0;
+	font-size: 2em;
+	-moz-transition: all 0.6s ease;
+	-webkit-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+	color: black !important;
+}
+.btn-pencil:hover {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+	-moz-transform: scale(1) rotate(30deg) translate(0px);
+	-webkit-transform: scale(1.0) rotate(30deg) translate(0px);
+	-o-transform: scale(1) rotate(30deg) translate(0px);
+	transform: scale(1) rotate(30deg) translate(0px); 
+}
+.btn-pencil span {
+	line-height: 41px;
+}
+.btn-pencil span.pencil-broken {
+	background: url('../../images/todo/todo-pencil-broken.png') top right / 100% 100% no-repeat;
+	opacity: 0;
+	display:block;
+	width: 126px;
+	height: 54px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	-moz-transition: all 0.1s ease;
+	-webkit-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+}
+.btn-pencil:focus span.pencil-broken {
+	opacity: 1;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.btn-pencil:active, .btn-pencil:enabled, .btn-pencil:focus {
+	background-size: calc(100% - 40px) 100% !important;
+	-moz-transform: scale(1) rotate(30deg) translate(-10px, 5px);
+	-webkit-transform: scale(1.0) rotate(30deg) translate(-10px, 5px);
+	-o-transform: scale(1) rotate(30deg) translate(-10px, 5px);
+	transform: scale(1) rotate(30deg) translate(-10px, 5px); 
+}
+@media (max-width: 600px) {
+	.btn-pencil {
+		font-size: 0.8em !important;
+		height: 40px;
+	}
+	.btn-pencil span {
+		line-height: 30px;
+	}
+	.btn-pencil span.pencil-broken {
+		height: 40px !important;
+	}
+	.btn-pencil span.pencil-broken {
+	background: url('../../images/todo/todo-pencil-broken.png') top right / 31.07% 100% no-repeat;
+	}
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+	.btn-pencil {
+		font-size: 1.2em !important;
+		height: 48px;
+	}
+	.btn-pencil span {
+		line-height: 37px;
+	}
+	.btn-pencil span.pencil-broken {
+		height: 48px !important;
+	}
+	.btn-pencil span.pencil-broken {
+	background: url('../../images/todo/todo-pencil-broken.png') top right / 55.85% 100% no-repeat;
+	}
+}
+
+
+@media (min-width: 480px) and (max-width: 640px) {
+	.table .btn {
+		font-size: 0.95em !important;
+		padding: 2px;
+		margin-bottom: 4px;
+	}
+	.table th, .table td {
+		padding: 3px !important;
+	}
+}
+@media (min-width: 341px) and (max-width: 480px) {
+	.table .btn {
+		font-size: 0.9em !important;
+		padding: 2px;
+		margin-bottom: 3px;
+	}
+	.table th, .table td {
+		padding: 2px !important;
+	}
+}
+@media (max-width: 340px) {
+	.table .btn {
+		font-size: 0.9em !important;
+		padding: 2px;
+		margin-bottom: 3px;
+	}
+	.table th, .table td {
+		padding: 2px !important;
+	}
+}

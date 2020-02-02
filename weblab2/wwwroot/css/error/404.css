@@ -1,0 +1,71 @@
+.msg-container {
+	display: inline-block;
+	width: 100%;	
+}
+#error404-01 {
+	display: block;
+	float:left;
+    background: url('../../images/error/error-tux.png') 0 0 no-repeat;
+    background-size: 100% 100%;
+    width: 192px;
+    height: 192px !important;
+    margin: 0;
+	padding: 0;
+	border: 0;
+}
+#text-h1 {
+	float: left;
+	width: calc(100% - 218px);
+	font-size: 2.9em;
+    margin: 90px 0 0 0;
+	padding: 0 0 0 20px;
+	border: 0;
+}
+@media (min-width: 641px) and (max-width: 768px) {
+	#error404-01 {
+	    width: 150px;
+    	height: 150px !important;
+	}
+	#text-h1 {
+		width: calc(100% - 176px);
+		font-size: 2em;
+	    margin: 70px 0 0 0;
+		padding: 0 0 0 20px;
+	}
+}
+@media (max-width: 640px) and (orientation: landscape) {
+	#error404-01 {
+	    width: 100px;
+    	height: 100px !important;
+	}
+	#text-h1 {
+		width: calc(100% - 126px);
+		font-size: 1.8em;
+	    margin: 47px 0 0 0;
+		padding: 0 0 0 20px;
+	}
+}
+@media (min-width: 341px) and (max-width: 480px) {
+	#error404-01 {
+	    width: 100px;
+    	height: 100px !important;
+	}
+	#text-h1 {
+		width: calc(100% - 126px);
+		font-size: 1em;
+	    margin: 52px 0 0 0;
+		padding: 0 0 0 10px;
+	}
+}
+@media (max-width: 340px) {
+	#error404-01 {
+	    width: 80px;
+    	height: 80px !important;
+	}
+	#text-h1 {
+		width: calc(100% - 126px);
+		font-size: 0.9em;
+	    margin: 42px 0 0 0;
+	    padding: 0 0 0 5px;	    
+	}
+}
