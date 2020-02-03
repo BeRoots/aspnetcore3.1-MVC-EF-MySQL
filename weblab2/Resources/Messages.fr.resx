@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="tpl.common.go-top" xml:space="preserve">
+		<value>Retour haut de page</value>
+	</data>
+	<data name="tpl.common.error.http.fetch-error" xml:space="preserve">
+		<value>Erreur: la requête n'a pas été envoyée. C'est probablement une erreur de réseau. Veuillez vous assurer que vous êtes connecté. Si oui, c'est une erreur d'opérateur d'extraction (fetch). Le bug a été envoyé au webmaster.</value>
+	</data>
+	<data name="tpl.common.error.http.xhr-error" xml:space="preserve">
+		<value>Erreur: la requête n'a pas été envoyée. C'est probablement une erreur de réseau. Veuillez vous assurer que vous êtes connecté. Si oui. C'est une erreur xhr. Le bug a été envoyé au webmaster.</value>
+	</data>
+	<data name="tpl.common.error.http.delete-409" xml:space="preserve">
+		<value>Erreur: Conflit. Cela est probablement dû à la suppression par un autre utilisateur. Revenez à la liste des tâches Todo. Normalement, la tâche devrait être supprimée.</value>
+	</data>
+	<data name="tpl.common.error.http.delete-4xx-5xx" xml:space="preserve">
+		<value>Erreur: erreur interne du serveur. Le bug a été envoyé au webmaster.</value>
+	</data>
+	<data name="tpl.common.error.http.put-409" xml:space="preserve">
+		<value>Erreur: Conflit. Cela est probablement dû à la suppression par un autre utilisateur. Rafraîchissez la liste des tâches Todo. Normalement, la tâche devrait être supprimée.</value>
+	</data>
+	<data name="tpl-default.meta.author" xml:space="preserve">
+		<value>Sébastien Deschamps</value>
+	</data>
+	<data name="tpl-default.meta.description" xml:space="preserve">
+		<value>Une description</value>
+	</data>
+	<data name="tpl-default.meta.title.00001strid" xml:space="preserve">
+		<value>sebastien-deschamps.com</value>
+	</data>
+	<data name="tpl-default.storage-requirement.00001strid" xml:space="preserve">
+		<value>Prise en charge des navigateurs</value>
+	</data>
+	<data name="tpl-default.storage-requirement.00002strid" xml:space="preserve">
+		<value>Bienvenue sur https://sebastien-deschamps.com</value>
+	</data>
+	<data name="tpl-default.storage-requirement.00003strid" xml:space="preserve">
+		<value>Votre navigateur est trop ancien pour prendre en charge la technologie utilisée par ce site Web. Rassurez-vous. Aujourd'hui, il existe des navigateurs gratuits pour fournir ces fonctionnalités et leur installation est rapide et facile. Voici quelques raccourcis pour télécharger les plus populaires et les plus sécurisés. Revenez sur ce site Web après en avoir installé un.</value>
+	</data>
+	<data name="tpl-default.storage-requirement.00004strid" xml:space="preserve">
+		<value>Dernière revue le lundi 08 janvier 2020 à 15:27 (UTC).</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.00001strid" xml:space="preserve">
+		<value>Règlement Général sur la Protection des Données</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.00002strid" xml:space="preserve">
+		<value>Bienvenue sur https://sebastien-deschamps.com</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.00003strid" xml:space="preserve">
+		<value>Conformément à la loi de 2018 sur le Règlement Général sur la Protection des Données (RGPD) et afin de bénéficier d'une interface plus évoluée et conviviale, vous acceptez, par votre utilisation de ce service, notre politique en matière de cookies jusqu'à la fermeture du logiciel par lequel vous accédez à notre site Web. Cette opération rend également le site Web plus sûr et plus efficace et accélérera votre navigation.</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.00004strid" xml:space="preserve">
+		<value>L'utilisation de cookies ici n'est en aucun cas à des fins publicitaires.</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.00005strid" xml:space="preserve">
+		<value>Pour plus d'informations, consultez nos</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.00006strid" xml:space="preserve">
+		<value>Conditions d'utilisation.</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.00007strid" xml:space="preserve">
+		<value>Je préfère partir</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.00008strid" xml:space="preserve">
+		<value>J'accepte</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.00009strid" xml:space="preserve">
+		<value>Dernière revue le lundi 08 janvier 2020 à 15:27 (UTC).</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.terms-of-use.00001strid" xml:space="preserve">
+		<value>Conditions d'utilisation</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.terms-of-use.00002strid" xml:space="preserve">
+		<value>Fermer</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.terms-of-use.00003strid" xml:space="preserve">
+		<value>Nos conditions d'utilisation de ce site Web</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.terms-of-use.00004strid" xml:space="preserve">
+		<value>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis quasi dicta modi illum dolorem suscipit nostrum dolorum voluptatum deserunt ad asperiores veritatis sint, corrupti ducimus et beatae assumenda. Laborum, temporibus.<br />Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia eius reprehenderit dolorem molestiae autem laudantium, debitis ipsam nobis nulla assumenda aliquam voluptatum eveniet delectus quae cupiditate deserunt ex possimus quo.<br />Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis quasi dicta modi illum dolorem suscipit nostrum dolorum voluptatum deserunt ad asperiores veritatis sint, corrupti ducimus et beatae assumenda. Laborum, temporibus.<br />Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia eius reprehenderit dolorem molestiae autem laudantium, debitis ipsam nobis nulla assumenda aliquam voluptatum eveniet delectus quae cupiditate deserunt ex possimus quo.</value>
+	</data>
+	<data name="tpl-default.gdpr-requirement.terms-of-use.00005strid" xml:space="preserve">
+		<value>Dernière revue le lundi 08 janvier 2020 à 15:27 (UTC).</value>
+	</data>
+	<data name="tpl-default.navbar.toogle" xml:space="preserve">
+		<value>Basculer</value>
+	</data>
+	<data name="tpl-default.navbar.home" xml:space="preserve">
+		<value>Accueil</value>
+	</data>
+	<data name="tpl-default.navbar.about" xml:space="preserve">
+		<value>Á propos</value>
+	</data>
+	<data name="tpl-default.navbar.about.header" xml:space="preserve">
+		<value>Á propos de cette application</value>
+	</data>
+	<data name="tpl-default.navbar.about.application" xml:space="preserve">
+		<value>Détails du projet</value>
+	</data>
+	<data name="tpl-default.navbar.about.application-test-results" xml:space="preserve">
+		<value>Resultats des tests</value>
+	</data>
+	<data name="tpl-default.navbar.specifications" xml:space="preserve">
+		<value>Terminaisons du dossier technique</value>
+	</data>
+	<data name="tpl-default.navbar.specifications.header" xml:space="preserve">
+		<value>Choisir une termisaison du dossier technique</value>
+	</data>
+	<data name="tpl-default.navbar.temporaryBuilds" xml:space="preserve">
+		<value>Builds Temporaires</value>
+	</data>
+	<data name="tpl-default.navbar.temporaryBuilds.header" xml:space="preserve">
+		<value>Choisir une build temporaire</value>
+	</data>
+	<data name="tpl-default.navbar.lang" xml:space="preserve">
+		<value>Langue</value>
+	</data>
+	<data name="tpl-default.navbar.lang.header" xml:space="preserve">
+		<value>Choisir une langue</value>
+	</data>
+	<data name="tpl-default.navbar.en-GB" xml:space="preserve">
+		<value>English (en)</value>
+	</data>
+	<data name="tpl-default.navbar.en-US" xml:space="preserve">
+		<value>English (en-US)</value>
+	</data>
+	<data name="tpl-default.navbar.fr-CH" xml:space="preserve">
+		<value>Français (fr-CH)</value>
+	</data>
+	<data name="tpl-default.navbar.fr-FR" xml:space="preserve">
+		<value>Français (fr)</value>
+	</data>
+	<data name="tpl-default.navbar.autodetect" xml:space="preserve">
+		<value>Auto-détection depuis votre système</value>
+	</data>
+	<data name="tpl-default.panelTitle.home" xml:space="preserve">
+		<value>Accueil</value>
+	</data>
+	<data name="tpl-default.footer.00001strid" xml:space="preserve">
+		<value>La réussite est liée à la patience mais elle dépend également de beaucoup de bonne volonté.</value>
+	</data>
+	<data name="tpl-default.footer.00002strid" xml:space="preserve">
+		<value>Citation de Gilbert Brévart</value>
+	</data>
+	<data name="tpl-default.footer.00003strid" xml:space="preserve">
+		<value>Tous droits réservés.</value>
+	</data>
+	<data name="ctl-home.index.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-home.index.meta.title" xml:space="preserve">
+		<value>Home Page d'accueil</value>
+	</data>
+	<data name="ctl-home.index.breadcrumbs.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-home.index.breadcrumbs.00002strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-home.index.panelTitle" xml:space="preserve">
+		<value>Bienvenue !</value>
+	</data>
+	<data name="ctl-home.index.optionControls.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-home.index.00001strid" xml:space="preserve">
+		<value>Bienvenue dans</value>
+	</data>
+	<data name="ctl-home.index.00002strid" xml:space="preserve">
+		<value>Application par</value>
+	</data>
+	<data name="ctl-home.index.00003strid" xml:space="preserve">
+		<value>pour</value>
+	</data>
+	<data name="ctl-home.index.00004strid" xml:space="preserve">
+		<value>éprouver celle-ci</value>
+	</data>
+	<data name="ctl-home.index.00005strid" xml:space="preserve">
+		<value>omnipartout</value>
+	</data>
+	<data name="ctl-home.index.00006strid" xml:space="preserve">
+		<value>Liser la documentation pour apprendre</value>
+	</data>
+	<data name="ctl-home.index.00007strid" xml:space="preserve">
+		<value>Comment créer votre première page avec Spring</value>
+	</data>
+	<data name="ctl-about.application.meta.title" xml:space="preserve">
+		<value>Á propos de ce projet</value>
+	</data>
+	<data name="ctl-about.application.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Détails du projet</value>
+	</data>
+	<data name="ctl-about.application.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Á propos de ce projet</value>
+	</data>
+	<data name="ctl-about.application.panelTitle" xml:space="preserve">
+		<value>Á propos des détails du project</value>
+	</data>
+	<data name="ctl-about.application.optionControls.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-about.application.00001strid" xml:space="preserve">
+		<value>Cette page à pour objectif de vous faire découvrir en détail les dépendances techniques de ce projet.</value>
+	</data>
+	<data name="ctl-about.application.00002strid" xml:space="preserve">
+		<value>L'application implemente l'ensemble des fondamentaux de dévelopement web et mobile</value>
+	</data>
+	<data name="ctl-about.application.00003strid" xml:space="preserve">
+		<value>Préambule:</value>
+	</data>
+	<data name="ctl-about.application.00004strid" xml:space="preserve">
+		<value>Préambule</value>
+	</data>
+	<data name="ctl-about.application.00005strid" xml:space="preserve">
+		<value>Les technologies communes:</value>
+	</data>
+	<data name="ctl-about.application.00006strid" xml:space="preserve">
+		<value>Les technologies communes</value>
+	</data>
+	<data name="ctl-about.application.00007strid" xml:space="preserve">
+		<value>Les technologies spécifiques:</value>
+	</data>
+	<data name="ctl-about.application.00008strid" xml:space="preserve">
+		<value>Les technologies spécifiques</value>
+	</data>
+	<data name="ctl-about.application.00009strid" xml:space="preserve">
+		<value>Les méthodologie et concepts utilisés:</value>
+	</data>
+	<data name="ctl-about.application.00010strid" xml:space="preserve">
+		<value>Les méthodologie et concepts utilisés</value>
+	</data>
+	<data name="ctl-about.application.00011strid" xml:space="preserve">
+		<value>Ce projet respect des conventions afin de pourvoir être définit comme étant de type "Application MVC CRUD Internationnalisée". L'objectif de cette application est de pouvoir être testée et comparée à d'autres applications strictement identiques sur le point de la conception, mais differentes en terme de technologies utilisées. C'est à dire que cette application et les autres applications basées sur ce model partage le même modèle architectural commun ainsi que la même interface graphique. Le modèle architectural ce doit d'utilisé un framework d'application ; d'implémenter un ORM ; d'utiliser le même SGBD ; d'utilisé un moteur de template. Il s'executera sur un serveur conteneurisé sous docker commun (OS Debian ; serveur HTTP Apache ; SGDB MySQL Community) L'interface graphique ce doit quand à elle de proposer les mêmes terminaisons par le biais de templates HTML 5 ; de fichiers de traductions ; et de feuilles de styles CSS strictement identiques. L'application se voudra également RGPD conforme ; utilisera les cookies et sessions ; et sera  également responsive afin que la consultation au travers d'appareil mobile soit également possible.</value>
+	</data>
+	<data name="ctl-about.application.00012strid" xml:space="preserve">
+		<value>Technologie</value>
+	</data>
+	<data name="ctl-about.application.00013strid" xml:space="preserve">
+		<value>Description</value>
+	</data>
+	<data name="ctl-about.application.00014strid" xml:space="preserve">
+		<value>Version</value>
+	</data>
+	<data name="ctl-about.application.00015strid" xml:space="preserve">
+		<value>Système d'exploitation</value>
+	</data>
+	<data name="ctl-about.application.00016strid" xml:space="preserve">
+		<value>Serveur HTTP</value>
+	</data>
+	<data name="ctl-about.application.00017strid" xml:space="preserve">
+		<value>Serveur de base de donnée MySQL</value>
+	</data>
+	<data name="ctl-about.application.00018strid" xml:space="preserve">
+		<value>Système de Gestion de Base de Donnée Transactionnel</value>
+	</data>
+	<data name="ctl-about.application.00019strid" xml:space="preserve">
+		<value>Framework CSS</value>
+	</data>
+	<data name="ctl-about.application.00020strid" xml:space="preserve">
+		<value>Widget de selection de date</value>
+	</data>
+	<data name="ctl-about.application.00021strid" xml:space="preserve">
+		<value>Framework Javascript</value>
+	</data>
+	<data name="ctl-about.application.00022strid" xml:space="preserve">
+		<value>Police de caractère additionnelle</value>
+	</data>
+	<data name="ctl-about.application.00023strid" xml:space="preserve">
+		<value>Runtime JAVA</value>
+	</data>
+	<data name="ctl-about.application.00024strid" xml:space="preserve">
+		<value>Framework d'application</value>
+	</data>
+	<data name="ctl-about.application.00025strid" xml:space="preserve">
+		<value>Framework d'ORM</value>
+	</data>
+	<data name="ctl-about.application.00026strid" xml:space="preserve">
+		<value>Moteur de template HTML</value>
+	</data>
+	<data name="ctl-about.application.00027strid" xml:space="preserve">
+		<value>Concept/Méthodologie</value>
+	</data>
+	<data name="ctl-about.application.00028strid" xml:space="preserve">
+		<value>Base d'architecture serveur répliquée</value>
+	</data>
+	<data name="ctl-about.application.00029strid" xml:space="preserve">
+		<value>Utilisation du même OS Serveur ; Serveur HTTP ; Server SGDB</value>
+	</data>
+	<data name="ctl-about.application.00030strid" xml:space="preserve">
+		<value>Nom de domaine</value>
+	</data>
+	<data name="ctl-about.application.00031strid" xml:space="preserve">
+		<value>Utilisation d'un nom de domaine identique et d'un même sous-domaine</value>
+	</data>
+	<data name="ctl-about.application.00032strid" xml:space="preserve">
+		<value>HTTP</value>
+	</data>
+	<data name="ctl-about.application.00033strid" xml:space="preserve">
+		<value>Protocole de communication non chiffré afin d'éviter les differences dans la longueur de réponse</value>
+	</data>
+	<data name="ctl-about.application.00034strid" xml:space="preserve">
+		<value>Une page. Une Requête.</value>
+	</data>
+	<data name="ctl-about.application.00035strid" xml:space="preserve">
+		<value>Inclusion des assets propre aux pages directement dans le HTML (aucune utilisation de tag HTML utilisant l'attribut src).</value>
+	</data>
+	<data name="ctl-about.application-test-results.meta.title" xml:space="preserve">
+		<value>Résultats des tests du projet</value>
+	</data>
+	<data name="ctl-about.application-test-results.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Résultats des tests</value>
+	</data>
+	<data name="ctl-about.application-test-results.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Résultats des tests</value>
+	</data>
+	<data name="ctl-about.application-test-results.panelTitle" xml:space="preserve">
+		<value>Résultats des tests du projet</value>
+	</data>
+	<data name="ctl-about.application-test-results.optionControls.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-todo.index.meta.title" xml:space="preserve">
+		<value>Liste des récents todos</value>
+	</data>
+	<data name="ctl-todo.index.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Todos</value>
+	</data>
+	<data name="ctl-todo.index.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Liste des récents todos</value>
+	</data>
+	<data name="ctl-todo.index.panelTitle" xml:space="preserve">
+		<value>Liste des récentes tâche Todo</value>
+	</data>
+	<data name="ctl-todo.index.optionControls.00001strid" xml:space="preserve">
+		<value>Nouvelle tâche Todo</value>
+	</data>
+	<data name="ctl-todo.index.00001strid" xml:space="preserve">
+		<value>Tâche</value>
+	</data>
+	<data name="ctl-todo.index.00002strid" xml:space="preserve">
+		<value>Date d'échéance</value>
+	</data>
+	<data name="ctl-todo.index.00003strid" xml:space="preserve">
+		<value>Actions</value>
+	</data>
+	<data name="ctl-todo.index.00004strid" xml:space="preserve">
+		<value>Voir la tâche</value>
+	</data>
+	<data name="ctl-todo.index.00005strid" xml:space="preserve">
+		<value>Voir</value>
+	</data>
+	<data name="ctl-todo.index.00006strid" xml:space="preserve">
+		<value>Réactiver la tâche</value>
+	</data>
+	<data name="ctl-todo.index.00007strid" xml:space="preserve">
+		<value>Réactiver</value>
+	</data>
+	<data name="ctl-todo.index.00008strid" xml:space="preserve">
+		<value>Valider la tâche</value>
+	</data>
+	<data name="ctl-todo.index.00009strid" xml:space="preserve">
+		<value>Valider</value>
+	</data>
+	<data name="ctl-todo.index.00010strid" xml:space="preserve">
+		<value>Reporter la tâche</value>
+	</data>
+	<data name="ctl-todo.index.00011strid" xml:space="preserve">
+		<value>Reporter</value>
+	</data>
+	<data name="ctl-todo.index.00012strid" xml:space="preserve">
+		<value>Editer la tâche</value>
+	</data>
+	<data name="ctl-todo.index.00013strid" xml:space="preserve">
+		<value>Editer</value>
+	</data>
+	<data name="ctl-todo.index.00014strid" xml:space="preserve">
+		<value>Supprimer la tâche</value>
+	</data>
+	<data name="ctl-todo.index.00015strid" xml:space="preserve">
+		<value>Supprimer</value>
+	</data>
+	<data name="ctl-todo.index.00016strid" xml:space="preserve">
+		<value>Aucune tâche todo trouvées.</value>
+	</data>
+	<data name="ctl-todo.index.00017strid" xml:space="preserve">
+		<value>Créer une tâche Todo maintenant!</value>
+	</data>
+	<data name="ctl-todo.create.meta.title" xml:space="preserve">
+		<value>Créer une nouvelle tâche Todo</value>
+	</data>
+	<data name="ctl-todo.create.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Todos</value>
+	</data>
+	<data name="ctl-todo.create.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Liste des récents todos</value>
+	</data>
+	<data name="ctl-todo.create.panelTitle" xml:space="preserve">
+		<value>Créer une nouvelle Todo</value>
+	</data>
+	<data name="ctl-todo.create.optionControls.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-todo.create.msginfo.success" xml:space="preserve">
+		<value>Votre tâche a été créée avec succès.</value>
+	</data>
+	<data name="ctl-todo.create.00001strid" xml:space="preserve">
+		<value>Intitulé</value>
+	</data>
+	<data name="ctl-todo.create.00002strid" xml:space="preserve">
+		<value>Date effective</value>
+	</data>
+	<data name="ctl-todo.create.00003strid" xml:space="preserve">
+		<value>Priorité</value>
+	</data>
+	<data name="ctl-todo.create.00004strid" xml:space="preserve">
+		<value>basse</value>
+	</data>
+	<data name="ctl-todo.create.00005strid" xml:space="preserve">
+		<value>haute</value>
+	</data>
+	<data name="ctl-todo.create.00006strid" xml:space="preserve">
+		<value>Catégorie</value>
+	</data>
+	<data name="ctl-todo.create.00007strid" xml:space="preserve">
+		<value>personnel</value>
+	</data>
+	<data name="ctl-todo.create.00008strid" xml:space="preserve">
+		<value>spécial</value>
+	</data>
+	<data name="ctl-todo.create.00009strid" xml:space="preserve">
+		<value>travail</value>
+	</data>
+	<data name="ctl-todo.create.00010strid" xml:space="preserve">
+		<value>Description</value>
+	</data>
+	<data name="ctl-todo.create.00011strid" xml:space="preserve">
+		<value>Remise à zero</value>
+	</data>
+	<data name="ctl-todo.create.00012strid" xml:space="preserve">
+		<value>Créer une tâche</value>
+	</data>
+	<data name="ctl-todo.create.00013strid" xml:space="preserve">
+		<value>Revenir à la liste des todos</value>
+	</data>
+	<data name="ctl-todo.create.99999strid" xml:space="preserve">
+		<value>Erreur du développeur</value>
+	</data>
+	<data name="ctl-todo.read.meta.title" xml:space="preserve">
+		<value>Détails de la tâche Todo</value>
+	</data>
+	<data name="ctl-todo.read.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Todos</value>
+	</data>
+	<data name="ctl-todo.read.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Liste des récents todos</value>
+	</data>
+	<data name="ctl-todo.read.panelTitle" xml:space="preserve">
+		<value>Détails de la tâche Todo</value>
+	</data>
+	<data name="ctl-todo.read.optionControls.00001strid" xml:space="preserve">
+		<value>Nouvelle tâche Todo</value>
+	</data>
+	<data name="ctl-todo.read.optionControls.00002strid" xml:space="preserve">
+		<value>Créer une nouvelle tâche Todo</value>
+	</data>
+	<data name="ctl-todo.read.00001strid" xml:space="preserve">
+		<value>La tâche todo avec l'ID {0} n'existe pas.</value>
+	</data>
+	<data name="ctl-todo.read.00002strid" xml:space="preserve">
+		<value>Editer</value>
+	</data>
+	<data name="ctl-todo.read.00003strid" xml:space="preserve">
+		<value>Catégorie</value>
+	</data>
+	<data name="ctl-todo.read.00004strid" xml:space="preserve">
+		<value>Priorité</value>
+	</data>
+	<data name="ctl-todo.read.00005strid" xml:space="preserve">
+		<value>Date effective</value>
+	</data>
+	<data name="ctl-todo.read.00006strid" xml:space="preserve">
+		<value>Revenir à la liste des todos</value>
+	</data>
+	<data name="ctl-todo.update.meta.title" xml:space="preserve">
+		<value>Mettre à jour une Todo</value>
+	</data>
+	<data name="ctl-todo.update.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Todos</value>
+	</data>
+	<data name="ctl-todo.update.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Liste des récents todos</value>
+	</data>
+	<data name="ctl-todo.update.panelTitle" xml:space="preserve">
+		<value>Mettre à jour une Todo existante</value>
+	</data>
+	<data name="ctl-todo.update.optionControls.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-todo.update.msginfo.success-for-id" xml:space="preserve">
+		<value>La tâche todo avec l'ID {0} a été mise à jour avec succès.</value>
+	</data>
+	<data name="ctl-todo.update.msginfo.id-not-exist" xml:space="preserve">
+		<value>La tâche todo avec l'ID {0} n'existe pas.</value>
+	</data>
+	<data name="ctl-todo.update.00001strid" xml:space="preserve">
+		<value>Intitulé</value>
+	</data>
+	<data name="ctl-todo.update.00002strid" xml:space="preserve">
+		<value>Date effective</value>
+	</data>
+	<data name="ctl-todo.update.00003strid" xml:space="preserve">
+		<value>Priorité</value>
+	</data>
+	<data name="ctl-todo.update.00004strid" xml:space="preserve">
+		<value>basse</value>
+	</data>
+	<data name="ctl-todo.update.00005strid" xml:space="preserve">
+		<value>haute</value>
+	</data>
+	<data name="ctl-todo.update.00006strid" xml:space="preserve">
+		<value>Catégorie</value>
+	</data>
+	<data name="ctl-todo.update.00007strid" xml:space="preserve">
+		<value>personnel</value>
+	</data>
+	<data name="ctl-todo.update.00008strid" xml:space="preserve">
+		<value>spécial</value>
+	</data>
+	<data name="ctl-todo.update.00009strid" xml:space="preserve">
+		<value>travail</value>
+	</data>
+	<data name="ctl-todo.update.00010strid" xml:space="preserve">
+		<value>Description</value>
+	</data>
+	<data name="ctl-todo.update.00011strid" xml:space="preserve">
+		<value>Remise à zero</value>
+	</data>
+	<data name="ctl-todo.update.00012strid" xml:space="preserve">
+		<value>Mettre à jour la Todo</value>
+	</data>
+	<data name="ctl-todo.update.00013strid" xml:space="preserve">
+		<value>Revenir à la liste des todos</value>
+	</data>
+	<data name="ctl-todo.update.99999strid" xml:space="preserve">
+		<value>Erreur du développeur</value>
+	</data>
+	<data name="ctl-todo.delete.meta.title" xml:space="preserve">
+		<value>Supprimer une Todo</value>
+	</data>
+	<data name="ctl-todo.delete.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Todos</value>
+	</data>
+	<data name="ctl-todo.delete.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Liste des récents todos</value>
+	</data>
+	<data name="ctl-todo.delete.panelTitle" xml:space="preserve">
+		<value>Confirmer la suppression de Todo</value>
+	</data>
+	<data name="ctl-todo.delete.optionControls.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-todo.delete.msginfo.success-for-id" xml:space="preserve">
+		<value>La tâche todo avec l'ID {0} a été supprimée avec succès.</value>
+	</data>
+	<data name="ctl-todo.delete.msginfo.id-not-exist" xml:space="preserve">
+		<value>La tâche todo avec l'ID {0} n'existe pas.</value>
+	</data>
+	<data name="ctl-todo.delete.00001strid" xml:space="preserve">
+		<value>Voulez-vous vraiment supprimer cette tâche?</value>
+	</data>
+	<data name="ctl-todo.delete.00002strid" xml:space="preserve">
+		<value>Confirmer la suppression</value>
+	</data>
+	<data name="ctl-todo.delete.00003strid" xml:space="preserve">
+		<value>Catégorie</value>
+	</data>
+	<data name="ctl-todo.delete.00004strid" xml:space="preserve">
+		<value>Priorité</value>
+	</data>
+	<data name="ctl-todo.delete.00005strid" xml:space="preserve">
+		<value>Date effective</value>
+	</data>
+	<data name="ctl-todo.delete.00006strid" xml:space="preserve">
+		<value>Revenir à la liste des todos</value>
+	</data>
+	<data name="ctl-todo.valid.msginfo.success-for-id" xml:space="preserve">
+		<value>La tâche todo avec l'ID {0} a été validée avec succès.</value>
+	</data>
+	<data name="ctl-todo.valid.msginfo.unvalid-success-for-id" xml:space="preserve">
+		<value>La tâche todo avec l'ID {0} a été unvalidée avec succès.</value>
+	</data>
+	<data name="ctl-todo.valid.msginfo.id-not-exist" xml:space="preserve">
+		<value>La tâche todo avec l'ID {0} n'existe pas.</value>
+	</data>
+	<data name="ctl-todo.reschedule.meta.title" xml:space="preserve">
+		<value>Replanifier une Todo</value>
+	</data>
+	<data name="ctl-todo.reschedule.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Todos</value>
+	</data>
+	<data name="ctl-todo.reschedule.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Liste des récents todos</value>
+	</data>
+	<data name="ctl-todo.reschedule.panelTitle" xml:space="preserve">
+		<value>Replanifier une Todo existante</value>
+	</data>
+	<data name="ctl-todo.reschedule.optionControls.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-todo.reschedule.msginfo.success-for-id" xml:space="preserve">
+		<value>La tâche todo avec l'ID {0} a été replanifiée avec succès.</value>
+	</data>
+	<data name="ctl-todo.reschedule.msginfo.id-not-exist" xml:space="preserve">
+		<value>La tâche todo avec l'ID {0} n'existe pas.</value>
+	</data>
+	<data name="ctl-todo.reschedule.00001strid" xml:space="preserve">
+		<value>Replanifier votre Todo</value>
+	</data>
+	<data name="ctl-todo.reschedule.00002strid" xml:space="preserve">
+		<value>Intitulé</value>
+	</data>
+	<data name="ctl-todo.reschedule.00003strid" xml:space="preserve">
+		<value>Date effective</value>
+	</data>
+	<data name="ctl-todo.reschedule.00004strid" xml:space="preserve">
+		<value>Priorité</value>
+	</data>
+	<data name="ctl-todo.reschedule.00005strid" xml:space="preserve">
+		<value>basse</value>
+	</data>
+	<data name="ctl-todo.reschedule.00006strid" xml:space="preserve">
+		<value>haute</value>
+	</data>
+	<data name="ctl-todo.reschedule.00007strid" xml:space="preserve">
+		<value>Catégorie</value>
+	</data>
+	<data name="ctl-todo.reschedule.00008strid" xml:space="preserve">
+		<value>personnel</value>
+	</data>
+	<data name="ctl-todo.reschedule.00009strid" xml:space="preserve">
+		<value>spécial</value>
+	</data>
+	<data name="ctl-todo.reschedule.00010strid" xml:space="preserve">
+		<value>travail</value>
+	</data>
+	<data name="ctl-todo.reschedule.00011strid" xml:space="preserve">
+		<value>Description</value>
+	</data>
+	<data name="ctl-todo.reschedule.00012strid" xml:space="preserve">
+		<value>Remise à zero</value>
+	</data>
+	<data name="ctl-todo.reschedule.00013strid" xml:space="preserve">
+		<value>Replanifier la Todo</value>
+	</data>
+	<data name="ctl-todo.reschedule.00014strid" xml:space="preserve">
+		<value>Revenir à la liste des todos</value>
+	</data>
+	<data name="ctl-todo.reschedule.99999strid" xml:space="preserve">
+		<value>Erreur du développeur</value>
+	</data>
+	<data name="ctl-rest.index.meta.title" xml:space="preserve">
+		<value>Web Service REST</value>
+	</data>
+	<data name="ctl-rest.index.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Terminaison REST</value>
+	</data>
+	<data name="ctl-rest.index.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Terminaison REST</value>
+	</data>
+	<data name="ctl-rest.index.panelTitle" xml:space="preserve">
+		<value>Web Service REST</value>
+	</data>
+	<data name="ctl-rest.index.optionControls.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-rest.index.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-rest.index.00002strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-soap.index.meta.title" xml:space="preserve">
+		<value>Web Service SOAP</value>
+	</data>
+	<data name="ctl-soap.index.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Terminaison SOAP</value>
+	</data>
+	<data name="ctl-soap.index.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Terminaison SOAP</value>
+	</data>
+	<data name="ctl-soap.index.panelTitle" xml:space="preserve">
+		<value>Web Service SOAP</value>
+	</data>
+	<data name="ctl-soap.index.optionControls.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-soap.index.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-soap.index.00002strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-stream.index.meta.title" xml:space="preserve">
+		<value>Web Service Stream</value>
+	</data>
+	<data name="ctl-stream.index.breadcrumbs.00001strid" xml:space="preserve">
+		<value>Terminaison Stream</value>
+	</data>
+	<data name="ctl-stream.index.breadcrumbs.00002strid" xml:space="preserve">
+		<value>Terminaison Stream</value>
+	</data>
+	<data name="ctl-stream.index.panelTitle" xml:space="preserve">
+		<value>Web Service Stream</value>
+	</data>
+	<data name="ctl-stream.index.optionControls.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-stream.index.00001strid" xml:space="preserve">
+		<value />
+	</data>
+	<data name="ctl-stream.index.00002strid" xml:space="preserve">
+		<value />
+    </data>
+</root>

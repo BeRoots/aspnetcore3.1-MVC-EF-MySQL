@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Pomelo.EntityFrameworkCore.MySql.Storage;
 using weblab2.Data;
@@ -47,14 +48,28 @@ namespace weblab2
             );
 
             services.AddLocalization(options => { options.ResourcesPath = "Resources"; });
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                    new CultureInfo("fr-FR"),
+                    new CultureInfo("fr-CH"),
+                    new CultureInfo("fr"),
+                    new CultureInfo("en-GB"),
+                    new CultureInfo("en-US"),
+                    new CultureInfo("en")
+                };
+                options.DefaultRequestCulture = new RequestCulture("en-GB");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
 
             services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0)
-                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddViewLocalization()
                 .AddDataAnnotationsLocalization()
                 .AddMvcOptions(options => { options.EnableEndpointRouting = false; });
 
             services.AddControllersWithViews();
-            //services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,33 +90,8 @@ namespace weblab2
 
             app.UseRouting();
 
-            var supportedCultures = new List<CultureInfo>
-                    {
-                        //new CultureInfo("en"),
-                        new CultureInfo("en-GB"),
-                        new CultureInfo("en-US"),
-                        //new CultureInfo("fr"),
-                        new CultureInfo("fr-FR"),
-                        new CultureInfo("fr-CH")
-                    };
-
-            /*            string ccTLD = "fr";
-                        /*string gTLD = "com|fr|pizza";
-                        string grTLD = "|biz|name|pro";
-                        string rTLD = "localhost";
-                        string ggrrTLD = "";* /
-                        RequestCulture ccTLDRequestCulture = ccTLD.Equals(null) ? new RequestCulture("en") : new RequestCulture(ccTLD);*/
-
-            app.UseRequestLocalization(new RequestLocalizationOptions
-            {
-                // RequestCulture global for request network origin
-                //                DefaultRequestCulture = ccTLDRequestCulture,
-                DefaultRequestCulture = new RequestCulture("en-GB"),
-                // Formatting numbers, dates, etc.
-                SupportedCultures = supportedCultures,
-                // UI strings that we have localized.
-                SupportedUICultures = supportedCultures
-            });
+            var localizationOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value;
+            app.UseRequestLocalization(localizationOptions);
 
             /* REMOVED FROM DEFAULT MVC PROJECT
             app.UseAuthorization();

@@ -99,11 +99,9 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="typeMismatch.todo.priority" xml:space="preserve">
-		<value>Priority must be LOW or HIGH.</value>
-		<comment></comment>
+		<value>La priorité doit être BASSE ou HAUTE.</value>
 	</data>
 	<data name="typeMismatch.todo.category" xml:space="preserve">
-		<value>Category must be WORK or PERSONAL or SPECIAL.</value>
-		<comment></comment>
+		<value>La catégorie doit être TRAVAIL ou PERSONNELLE ou SPÉCIALE.</value>
 	</data>
 </root>
