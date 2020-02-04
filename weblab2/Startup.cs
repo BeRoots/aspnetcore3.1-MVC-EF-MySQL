@@ -31,22 +31,6 @@ namespace weblab2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseMySql(
-                    Configuration.GetConnectionString("DefaultConnection"),
-                    mysqlOptions =>
-                    {
-                        mysqlOptions.ServerVersion(new ServerVersion(new Version(5, 7, 23), ServerType.MySql))
-                            .CharSetBehavior(CharSetBehavior.AppendToAllAnsiColumns)
-                            .CharSet(CharSet.Latin1)
-                            .CharSetBehavior(CharSetBehavior.AppendToAllColumns)
-                            .CharSet(CharSet.Utf8Mb4)
-                            .MigrationsAssembly("weblab2")
-                            .MigrationsHistoryTable("EF_Migrations");
-                    }
-                )
-            );
-
             services.AddLocalization(options => { options.ResourcesPath = "Resources"; });
             services.Configure<RequestLocalizationOptions>(options =>
             {

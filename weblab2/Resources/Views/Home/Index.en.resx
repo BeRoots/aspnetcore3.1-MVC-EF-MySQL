@@ -117,26 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="tpl.common.go-top" xml:space="preserve">
-    <value>Retour haut de page</value>
-  </data>
-  <data name="tpl.common.error.http.fetch-error" xml:space="preserve">
-    <value>Erreur: la requête n'a pas été envoyée. C'est probablement une erreur de réseau. Veuillez vous assurer que vous êtes connecté. Si oui, c'est une erreur d'opérateur d'extraction (fetch). Le bug a été envoyé au webmaster.</value>
-  </data>
-  <data name="tpl.common.error.http.xhr-error" xml:space="preserve">
-    <value>Erreur: la requête n'a pas été envoyée. C'est probablement une erreur de réseau. Veuillez vous assurer que vous êtes connecté. Si oui. C'est une erreur xhr. Le bug a été envoyé au webmaster.</value>
-  </data>
-  <data name="tpl.common.error.http.delete-409" xml:space="preserve">
-    <value>Erreur: Conflit. Cela est probablement dû à la suppression par un autre utilisateur. Revenez à la liste des tâches Todo. Normalement, la tâche devrait être supprimée.</value>
-  </data>
-  <data name="tpl.common.error.http.delete-4xx-5xx" xml:space="preserve">
-    <value>Erreur: erreur interne du serveur. Le bug a été envoyé au webmaster.</value>
-  </data>
-  <data name="tpl.common.error.http.put-409" xml:space="preserve">
-    <value>Erreur: Conflit. Cela est probablement dû à la suppression par un autre utilisateur. Rafraîchissez la liste des tâches Todo. Normalement, la tâche devrait être supprimée.</value>
-  </data>
-  <data name="tpl-default.meta.authorz" xml:space="preserve">
-    <value>John Doe (fr)</value>
-    <comment>John Doe (fr fallback)</comment>
+  <data name="tpl-default.meta.author" xml:space="preserve">
+    <value>John Doe (en)</value>
+    <comment>John Doe (en fallback)</comment>
   </data>
 </root>
